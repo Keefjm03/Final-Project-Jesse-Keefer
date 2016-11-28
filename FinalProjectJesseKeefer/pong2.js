@@ -1,4 +1,8 @@
 /**
+ * Created by keefe on 11/27/2016.
+ */
+
+/**
  * Created by keefe on 10/30/2016.
  */
 
@@ -50,7 +54,7 @@ function Paddle(x, y, width, height) {
 }
 
 Paddle.prototype.render = function() {
-    context.fillStyle = "#68879b";
+    context.fillStyle = "#0000FF";
     context.fillRect(this.x, this.y, this.width, this.height);
 };
 
@@ -84,7 +88,7 @@ function Ball(x, y) {
 Ball.prototype.render = function() {
     context.beginPath();
     context.arc(this.x, this.y, this.radius, 2 * Math.PI, false);
-    context.fillStyle = "#003E77";
+    context.fillStyle = "#F8F8FF";
     context.fill();
 };
 
@@ -94,7 +98,7 @@ var computer = new Computer();
 var ball = new Ball(200, 300);
 
 var render = function() {
-    context.fillStyle = "#C3DEE8";
+    context.fillStyle = "#FF0000";
     context.fillRect(0, 0, width, height);
     player.render();
     computer.render();
