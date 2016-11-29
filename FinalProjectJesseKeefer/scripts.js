@@ -1,21 +1,57 @@
-var soundFile = document.createElement("audio");
-soundFile.preload = "auto";
-var volume;
-var src = document.createElement();
-src.src= Starboy + ".mp3";
-soundFile.appendChild(src);
 
-soundFile.load();
-soundFile.volume= 0.75;
-soundFile.play();
+var name;
+var USERNAME;
 
+function RegisterSession(){
+    name= document.getElementById("txtName").value;
 
-function play(){
-    soundFile.currentTime=0.01;
-    soundFile.volume=volume;
-
-    setTimeout(function(){soundFile.play();},1);
+    if(name== ""){
+        document.getElementById("divError").innerHTML="Please enter a name";
+    return;
+    }else{
+        document.getElementById("divError").innerHTML="";
+    }sessionStorage.setItem(USERNAME,name);
+    window.location.href="session.html";
 }
+
+
+function SaveSession(){
+    sessionStorage.setItem("",);
+    sessionStorage.setItem("",);
+}
+
+function RetrieveSession(){
+    ____=parseFloat(sessionStorage.getItem("__"));
+
+    ____=parseFloat(sessionStorage.getItem("__"));
+
+    document.getElementById("__").innerHTML= ____;
+    document.getElementById("__").innerHTML= ____;
+
+    if(sessionStorage.getItem("__")!= null){
+        ___=parseFloat(sessionStorage.getItem("__"));
+    }else{
+        ___=0;
+    }
+    if(sessionStorage.getItem("__")!= null){
+        ___=parseFloat(sessionStorage.getItem("__"));
+    }else{
+        ___=0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
